@@ -1,0 +1,302 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Центрирование */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    position: relative;
+    background: rgb(150,189,142);
+    background: linear-gradient(0deg, rgba(150,189,142,1) 31%, rgba(107,165,135,1) 77%);
+    color: white;
+    text-align: center;
+    padding: 20px 15px 50px;
+}
+
+.header-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.speaker-container {
+    position: relative;
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.speaker-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #2196F3;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.telegram-icon {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    background: #2196F3;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.telegram-icon img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+/* Бегущая строка */
+.marquee {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 25s linear infinite;
+    font-style: italic;
+    font-size: 0.9em;
+    color: white;
+    animation-delay: 0s;
+    position: relative;
+    left: 0;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Анимации */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 {
+    transition-delay: 0.3s;
+}
+
+.delay-2 {
+    transition-delay: 0.6s;
+}
+
+/* Кнопка */
+.cta-button {
+    background: #FFC107;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #FFB300;
+}
+
+/* Контент */
+.content-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+    margin: 15px auto 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.text-block h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    color: #4CAF50;
+}
+
+/* Иконка перед заголовком "Что вас ждет в блоге?" */
+.text-block h2[data-icon="reader"]::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/reader-outline.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Иконка перед заголовком "Что мы обсуждаем в блоге?" */
+.text-block h2[data-icon="sparkles"]::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("images/sparkles-outline.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 0 0 #2196F3); /* Синий цвет */
+}
+
+/* Иконка перед каждым пунктом списка */
+.text-block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.text-block li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.text-block li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-image: url("images/radio-button-off-outline.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Изображения */
+.image-block {
+    position: relative;
+    height: 200px;
+    margin: 40px;
+    margin-top: 68px;
+}
+
+.image {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    position: absolute;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image.fade.delay-1 {
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transform: translateY(30px);
+    transition-delay: 0.3s;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image.fade.delay-2 {
+    top: 30px;
+    left: 90px;
+    z-index: 1;
+    transform: translateY(50px);
+    transition-delay: 0.4s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .content-block {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        margin: 15px auto 60px;
+    }
+
+    .image-block {
+        height: 150px;
+        margin-bottom: 30px;
+    }
+
+    .image {
+        width: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .image.fade.delay-1 {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .image.fade.delay-2 {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Футер */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-link {
+    color: #ccC;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #ccc;
+}
