@@ -203,7 +203,7 @@ body {
 /* Добавить в ваш CSS файл */
 a.custom-link {
     color: #808080; /* серый цвет */
-    text-decoration: none; /* убрать подчеркивание */
+    text-decoration: underline;
 }
 
 a.custom-link:hover {
