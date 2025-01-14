@@ -200,6 +200,16 @@ body {
     background-repeat: no-repeat;
 }
 
+/* Добавить в ваш CSS файл */
+a.custom-link {
+    color: #808080; /* серый цвет */
+    text-decoration: none; /* убрать подчеркивание */
+}
+
+a.custom-link:hover {
+    color: #555555; /* темнее серый при наведении */
+}
+
 /* Изображения */
 .image-block {
     position: relative;
