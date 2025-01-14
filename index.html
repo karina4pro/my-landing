@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telegram-блог по психологии</title>
@@ -17,6 +15,7 @@
 
       gtag('config', 'G-1RBZTCWQSG');
     </script>
+</head>
 <body>
     <header class="header">
         <div class="header-container container">
@@ -31,21 +30,21 @@
             <div class="marquee">
                 <p>Я, Карина Варганова, практикующий психолог, приглашаю тебя в мой Telegram-канал.</p>
             </div>
-            <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-button" onclick="gtag_report_conversion('https://t.me/karinavarganova')">👉 Перейти в Telegram</a>
+            <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-button-top" onclick="gtag_report_conversion('https://t.me/karinavarganova')">👉 Перейти в Telegram</a> <!-- Кнопка вверху -->
         </div>
     </header>
 
     <main class="container">
         <section class="content-block fade">
             <div class="text-block">
-                <h2 data-icon="reader"><!-- Иконка добавится через CSS --> Что мы обсуждаем в блоге?</h2>
+                <h2 data-icon="reader">Что мы обсуждаем в блоге?</h2>
                 <ul>
-                    <li>Портрет созависимого человека.</li>
-                    <li>5 основных предпосылок для формирования зависимого поведения.</li>
-                    <li>Тревога и ее роль в отношениях.</li>
-                    <li>Как понять, что отношения между людьми зависимы?</li>
-                    <li>Почему боль – это полезный ориентир?</li>
-                    <li>Как созависимость меняет восприятие.</li>
+                    <li><a href="https://t.me/karinavarganova" id="topic1" onclick="gtag('event', 'click', {'event_category': 'Topic', 'event_label': 'Портрет созависимого человека'})">Портрет созависимого человека.</a></li>
+                    <li><a href="https://t.me/karinavarganova" id="topic2" onclick="gtag('event', 'click', {'event_category': 'Topic', 'event_label': '5 основных предпосылок для формирования зависимого поведения'})">5 основных предпосылок для формирования зависимого поведения.</a></li>
+                    <li><a href="https://t.me/karinavarganova" id="topic3" onclick="gtag('event', 'click', {'event_category': 'Topic', 'event_label': 'Тревога и ее роль в отношениях'})">Тревога и ее роль в отношениях.</a></li>
+                    <li><a href="https://t.me/karinavarganova" id="topic4" onclick="gtag('event', 'click', {'event_category': 'Topic', 'event_label': 'Как понять, что отношения между людьми зависимы?'})">Как понять, что отношения между людьми зависимы?</a></li>
+                    <li><a href="https://t.me/karinavarganova" id="topic5" onclick="gtag('event', 'click', {'event_category': 'Topic', 'event_label': 'Почему боль – это полезный ориентир?'})">Почему боль – это полезный ориентир?</a></li>
+                    <li><a href="https://t.me/karinavarganova" id="topic6" onclick="gtag('event', 'click', {'event_category': 'Topic', 'event_label': 'Как созависимость меняет восприятие.'})">Как созависимость меняет восприятие.</a></li>
                 </ul>
             </div>
             <div class="image-block">
@@ -56,7 +55,7 @@
 
         <section class="content-block fade">
             <div class="text-block">
-                <h2 data-icon="sparkles"><!-- Иконка добавится через CSS --> Что вас ждет в блоге?</h2>
+                <h2 data-icon="sparkles">Что вас ждет в блоге?</h2>
                 <ul>
                     <li>Общение с единомышленниками.</li>
                     <li>Возможность задать вопросы эксперту.</li>
@@ -72,7 +71,7 @@
 
     <footer class="footer fade">
         <p>Готовы научиться строить здоровые отношения? Присоединяйтесь к моему Telegram-блогу прямо сейчас!</p>
-        <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-button" onclick="gtag_report_conversion('https://t.me/karinavarganova')">👉 Перейти в Telegram</a>
+        <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-button-bottom" onclick="gtag_report_conversion('https://t.me/karinavarganova')">👉 Перейти в Telegram</a> <!-- Кнопка внизу -->
         <div class="footer-links">
             <a href="#" class="footer-link">Политика конфиденциальности</a>
             <p class="copyright">© Karina Varganova 2025</p>
