@@ -22,7 +22,11 @@
         <div class="header-container container">
             <div class="speaker-container">
                 <img src="images/speaker.jpg" alt="Фото спикера" class="speaker-photo">
-                <a href="https://t.me/ваш_канал" class="telegram-icon">
+                <a href="https://t.me/ваш_канал" class="telegram-icon"
+                   onclick="gtag('event', 'button_click', {
+                       'event_category': 'telegram',
+                       'event_label': 'icon_button'
+                   });">
                     <img src="images/telegram.svg" alt="Telegram">
                 </a>
             </div>
@@ -31,7 +35,10 @@
                 <p>Я, Карина Варганова, практикующий психолог, приглашаю тебя в мой Telegram-канал.</p>
             </div>
             <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-button" 
-               onclick="gtag('event', 'button_click', {button_name: 'Telegram Button Top'});">
+               onclick="gtag('event', 'button_click', {
+                   'event_category': 'telegram',
+                   'event_label': 'top_button'
+               });">
                 👉 Перейти в Telegram
             </a>
         </div>
@@ -42,12 +49,36 @@
             <div class="text-block">
                 <h2 data-icon="reader">Что мы обсуждаем в блоге?</h2>
                 <ul>
-                    <li><a href="https://t.me/karinavarganova" id="topic-1" class="custom-link">Портрет созависимого человека.</a></li>
-                    <li><a href="https://t.me/karinavarganova" id="topic-2" class="custom-link">5 основных предпосылок для формирования зависимого поведения.</a></li>
-                    <li><a href="https://t.me/karinavarganova" id="topic-3" class="custom-link">Тревога и ее роль в отношениях.</a></li>
-                    <li><a href="https://t.me/karinavarganova" id="topic-4" class="custom-link">Как понять, что отношения между людьми зависимы?</a></li>
-                    <li><a href="https://t.me/karinavarganova" id="topic-5" class="custom-link">Почему боль – это полезный ориентир?</a></li>
-                    <li><a href="https://t.me/karinavarganova" id="topic-6" class="custom-link">Как созависимость меняет восприятие.</a></li>
+                    <li><a href="https://t.me/karinavarganova" id="topic-1" class="custom-link" 
+                           onclick="gtag('event', 'link_click', {
+                               'event_category': 'telegram',
+                               'event_label': 'topic_1'
+                           });">Портрет созависимого человека.</a></li>
+                    <li><a href="https://t.me/karinavarganova" id="topic-2" class="custom-link" 
+                           onclick="gtag('event', 'link_click', {
+                               'event_category': 'telegram',
+                               'event_label': 'topic_2'
+                           });">5 основных предпосылок для формирования зависимого поведения.</a></li>
+                    <li><a href="https://t.me/karinavarganova" id="topic-3" class="custom-link" 
+                           onclick="gtag('event', 'link_click', {
+                               'event_category': 'telegram',
+                               'event_label': 'topic_3'
+                           });">Тревога и ее роль в отношениях.</a></li>
+                    <li><a href="https://t.me/karinavarganova" id="topic-4" class="custom-link" 
+                           onclick="gtag('event', 'link_click', {
+                               'event_category': 'telegram',
+                               'event_label': 'topic_4'
+                           });">Как понять, что отношения между людьми зависимы?</a></li>
+                    <li><a href="https://t.me/karinavarganova" id="topic-5" class="custom-link" 
+                           onclick="gtag('event', 'link_click', {
+                               'event_category': 'telegram',
+                               'event_label': 'topic_5'
+                           });">Почему боль – это полезный ориентир?</a></li>
+                    <li><a href="https://t.me/karinavarganova" id="topic-6" class="custom-link" 
+                           onclick="gtag('event', 'link_click', {
+                               'event_category': 'telegram',
+                               'event_label': 'topic_6'
+                           });">Как созависимость меняет восприятие.</a></li>
                 </ul>
             </div>
             <div class="image-block">
@@ -75,7 +106,10 @@
     <footer class="footer fade">
         <p>Готовы научиться строить здоровые отношения? Присоединяйтесь к моему Telegram-блогу прямо сейчас!</p>
         <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-footer-button" 
-           onclick="gtag('event', 'button_click', {button_name: 'Telegram Footer Button'});">
+           onclick="gtag('event', 'button_click', {
+               'event_category': 'telegram',
+               'event_label': 'footer_button'
+           });">
             👉 Перейти в Telegram
         </a>
         <div class="footer-links">
