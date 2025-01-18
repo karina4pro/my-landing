@@ -30,10 +30,11 @@
             <div class="marquee">
                 <p>Я, Карина Варганова, практикующий психолог, приглашаю тебя в мой Telegram-канал.</p>
             </div>
-            <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-button" 
-               onclick="gtag('event', 'button_click', {button_name: 'Telegram Button Top'});">
-                👉 Перейти в Telegram
-            </a>
+                <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-button" 
+                   onclick="gtag('event', 'button_click', {
+                     'event_category': 'telegram',
+                     'event_label': 'top_button'
+                   });">
         </div>
     </header>
 
@@ -74,10 +75,12 @@
 
     <footer class="footer fade">
         <p>Готовы научиться строить здоровые отношения? Присоединяйтесь к моему Telegram-блогу прямо сейчас!</p>
+        <!-- Нижняя кнопка -->
         <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-footer-button" 
-           onclick="gtag('event', 'button_click', {button_name: 'Telegram Footer Button'});">
-            👉 Перейти в Telegram
-        </a>
+           onclick="gtag('event', 'button_click', {
+             'event_category': 'telegram',
+             'event_label': 'bottom_button'
+           });">
         <div class="footer-links">
             <a href="#" class="footer-link">Политика конфиденциальности</a>
             <p class="copyright">© Karina Varganova 2025</p>
