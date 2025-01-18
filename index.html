@@ -7,31 +7,17 @@
     <link rel="icon" type="image/svg+xml" href="images/welcome-write-blog.svg">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Tag Manager (GTM) - вставь этот код в <head> -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NJ92LMGQ');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google Analytics - этот код нужен для отслеживания пользователей на сайте -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1RBZTCWQSG"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-1RBZTCWQSG');
     </script>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) - вставь этот код сразу после открывающего <body> -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJ92LMGQ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <header class="header">
         <div class="header-container container">
             <div class="speaker-container">
@@ -44,7 +30,10 @@
             <div class="marquee">
                 <p>Я, Карина Варганова, практикующий психолог, приглашаю тебя в мой Telegram-канал.</p>
             </div>
-            <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-button" onclick="gtag_report_conversion('https://t.me/karinavarganova')">👉 Перейти в Telegram</a>
+            <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-button" 
+               onclick="gtag('event', 'button_click', {button_name: 'Telegram Button Top'});">
+                👉 Перейти в Telegram
+            </a>
         </div>
     </header>
 
@@ -69,7 +58,7 @@
 
         <section class="content-block fade">
             <div class="text-block">
-                <h2 data-icon="sparkles"><!-- Иконка добавится через CSS --> Что вас ждет в блоге?</h2>
+                <h2 data-icon="sparkles">Что вас ждет в блоге?</h2>
                 <ul>
                     <li>Общение с единомышленниками.</li>
                     <li>Возможность задать вопросы эксперту.</li>
@@ -85,7 +74,10 @@
 
     <footer class="footer fade">
         <p>Готовы научиться строить здоровые отношения? Присоединяйтесь к моему Telegram-блогу прямо сейчас!</p>
-        <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-button" onclick="gtag_report_conversion('https://t.me/karinavarganova')">👉 Перейти в Telegram</a>
+        <a href="https://t.me/karinavarganova" class="cta-button fade" id="telegram-footer-button" 
+           onclick="gtag('event', 'button_click', {button_name: 'Telegram Footer Button'});">
+            👉 Перейти в Telegram
+        </a>
         <div class="footer-links">
             <a href="#" class="footer-link">Политика конфиденциальности</a>
             <p class="copyright">© Karina Varganova 2025</p>
